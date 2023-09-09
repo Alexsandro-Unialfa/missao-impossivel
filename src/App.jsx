@@ -2,6 +2,8 @@ import React from 'react'
 import { Header } from './components/Header'
 import { Card } from './components/Card'
 import Modal, { ModalBody, ModalHeader } from './components/Modal'
+import Footer from './components/Footer'
+
 
 import banner from './imagens/banner.jpg'
 import card1 from './imagens/card1.jpg'
@@ -66,6 +68,7 @@ function App() {
               <Card
                 key={filme.id}
                 imagem={filme.imagem}
+                titulo={filme.titulo}
               />
             )
           })
@@ -110,13 +113,19 @@ function App() {
                 fontSize: '0.8rem'
               }}
             >
-              Seu Madruga
+              Alexsandro
             </p>
           </div>
         </ModalBody>
       </Modal>
+      <Footer /> {/* Coloque o componente Footer aqui */}
     </>
   );
+
+
+
 }
+
+
 
 export default App;
